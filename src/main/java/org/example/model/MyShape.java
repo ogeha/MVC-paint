@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.model;
+package org.example.model;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -13,18 +13,17 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.RectangularShape;
 
 /**
- *
  * @author Wera
  */
 public class MyShape {
-    Color color;
-    RectangularShape shape;
-    FillBehavior fb;
+    private Color color;
+    private RectangularShape shape;
+    private FillBehavior fb;
 
     public MyShape(RectangularShape shape) {
         this.shape = shape;
-        color = Color.BLUE;
-        fb = new NoFill();
+        color = Color.GRAY;
+        fb = new Fill();
         fb.setColor(color);
         fb.serShape(shape);
     }
@@ -54,18 +53,13 @@ public class MyShape {
     public void setShape(RectangularShape shape) {
         this.shape = shape;
     }
-    
-    public void setFrame(Point2D[]pd){
+
+    public void setFrame(Point2D[] pd) {
         shape.setFrameFromDiagonal(pd[0], pd[1]);
     }
 
     void draw(Graphics2D g) {
         fb.draw(g);
-       
-    }
-    //////////////////////////////////////////////////////////
-   
 
-   
-    
+    }
 }

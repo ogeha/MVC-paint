@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.model;
+package org.example.model;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -11,25 +11,21 @@ import java.awt.Paint;
 import java.awt.geom.RectangularShape;
 
 /**
- *
  * @author Wera
  */
 public class Fill implements FillBehavior {
 
-    Color color;
-    RectangularShape shape;
-
-   
+    private Color color;
+    private RectangularShape shape;
 
     public Fill() {
-        
+
     }
-     @Override
+
+    @Override
     public void setColor(Color color) {
         this.color = color;
     }
-
-    
 
     @Override
     public void draw(Graphics2D g) {

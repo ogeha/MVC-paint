@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.model;
+package org.example.model;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.RectangularShape;
 
 /**
- *
  * @author Wera
  */
 public interface FillBehavior {
-        void draw(Graphics2D g);
-        void setColor(Color c);
-        void serShape(RectangularShape s);
-    }
+    void draw(Graphics2D g);
+
+    void setColor(Color c);
+
+    void serShape(RectangularShape s);
+}

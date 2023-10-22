@@ -3,34 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.view;
+package org.example.view;
+
+import org.example.controller.Controller;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseMotionListener;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.JPanel;
-import mvc.Controller.Controller;
-
 
 
 /**
- *
  * @author Wera
  */
-public class MyPanel extends JPanel implements Observer{
-    Controller controller;
-    
-    public MyPanel(){
-        
+public class MyPanel extends JPanel implements Observer {
+    private Controller controller;
+
+    public MyPanel() {
         addMouseListener(new MouseAdapter() {
             @Override
-             public void mousePressed(MouseEvent arg0){
-                 controller.getPointOne( arg0.getPoint());
-             }
+            public void mousePressed(MouseEvent arg0) {
+                controller.getPointOne(arg0.getPoint());
+            }
         });
         addMouseMotionListener(new MouseMotionAdapter() {
             @Override
@@ -39,13 +38,14 @@ public class MyPanel extends JPanel implements Observer{
             }
         });
     }
+
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2 = (Graphics2D)g;
+        Graphics2D g2 = (Graphics2D) g;
         controller.draw(g2);
-       
-        
+
+
     }
 
     public void setController(Controller controller) {
@@ -56,5 +56,5 @@ public class MyPanel extends JPanel implements Observer{
     public void update(Observable o, Object arg) {
         repaint();
     }
-   
+
 }

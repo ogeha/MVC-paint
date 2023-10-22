@@ -1,25 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package mvc.model;
+package org.example.model;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Paint;
 import java.awt.geom.RectangularShape;
 
-/**
- *
- * @author Wera
- */
 public class NoFill implements FillBehavior {
+    private Color color;
+    private RectangularShape shape;
 
-    Color color;
-    RectangularShape shape;
-
-      
     public NoFill() {
     }
 
@@ -27,7 +16,6 @@ public class NoFill implements FillBehavior {
     public void setColor(Color color) {
         this.color = color;
     }
-    
 
     @Override
     public void draw(Graphics2D g) {
@@ -39,6 +27,6 @@ public class NoFill implements FillBehavior {
 
     @Override
     public void serShape(RectangularShape s) {
-        shape=s;
+        shape = s;
     }
 }
