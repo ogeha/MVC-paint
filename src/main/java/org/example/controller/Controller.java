@@ -2,7 +2,7 @@ package org.example.controller;
 
 import org.example.model.Model;
 import org.example.model.MyShape;
-import org.example.model.NoFill;
+import org.example.model.fill.NoFill;
 import org.example.view.MyFrame;
 import org.example.view.MyPanel;
 

@@ -7,9 +7,6 @@ package org.example.view;
 
 import javax.swing.JFrame;
 
-/**
- * @author Wera
- */
 public class MyFrame extends JFrame {
     private MyPanel panel;
 

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.example.view;
 
 import org.example.controller.Controller;
@@ -12,15 +7,11 @@ import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.event.MouseMotionListener;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.JPanel;
 
 
-/**
- * @author Wera
- */
 public class MyPanel extends JPanel implements Observer {
     private Controller controller;
 

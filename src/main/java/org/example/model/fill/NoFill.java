@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.model.fill;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
