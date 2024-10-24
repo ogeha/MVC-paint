@@ -6,12 +6,12 @@
 package org.example.view;
 
 import javax.swing.JFrame;
+import java.awt.*;
 
 public class MyFrame extends JFrame {
     private MyPanel panel;
 
     public MyFrame() {
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500, 500);
         setVisible(true);

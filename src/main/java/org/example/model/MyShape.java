@@ -19,28 +19,30 @@ public class MyShape {
         color = Color.GRAY;
         fb = new Fill();
         fb.setColor(color);
-        fb.serShape(shape);
+        fb.setShape(shape);
     }
 
+    // TODO: 25.10.2024  Попробовать вызовы через разные конструкторы, затем переделать создание через фабрику
     public MyShape() {
         color = Color.BLUE;
         shape = new Rectangle2D.Double();
         fb = new Fill();
         fb.setColor(color);
-        fb.serShape(shape);
+        fb.setShape(shape);
     }
 
+    // TODO: 25.10.2024  Попробовать вызовы через разные конструкторы, затем переделать создание через фабрику
     public MyShape(Color color, RectangularShape shape, FillBehavior fb) {
         this.color = color;
         this.shape = shape;
         this.fb = fb;
-        this.fb.serShape(shape);
+        this.fb.setShape(shape);
         this.fb.setColor(color);
     }
 
     public void setFb(FillBehavior fb) {
         this.fb = fb;
-        fb.serShape(shape);
+        fb.setShape(shape);
         fb.setColor(color);
     }
 
@@ -48,8 +50,8 @@ public class MyShape {
         this.shape = shape;
     }
 
-    public void setFrame(Point2D[] pd) {
-        shape.setFrameFromDiagonal(pd[0], pd[1]);
+    public void setFrame(Point2D x, Point2D y) {
+        shape.setFrameFromDiagonal(x, y);
     }
 
     void draw(Graphics2D g) {

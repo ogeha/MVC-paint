@@ -26,7 +26,7 @@ public class NoFill implements FillBehavior {
     }
 
     @Override
-    public void serShape(RectangularShape s) {
+    public void setShape(RectangularShape s) {
         shape = s;
     }
 }

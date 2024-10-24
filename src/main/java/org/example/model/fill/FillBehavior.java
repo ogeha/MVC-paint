@@ -9,5 +9,5 @@ public interface FillBehavior {
 
     void setColor(Color c);
 
-    void serShape(RectangularShape s);
+    void setShape(RectangularShape s);
 }

@@ -15,7 +15,8 @@ import javax.swing.JPanel;
 public class MyPanel extends JPanel implements Observer {
     private Controller controller;
 
-    public MyPanel() {
+    public MyPanel(Controller controller) {
+        this.controller = controller;
         addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent arg0) {
@@ -35,12 +36,6 @@ public class MyPanel extends JPanel implements Observer {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         controller.draw(g2);
-
-
-    }
-
-    public void setController(Controller controller) {
-        this.controller = controller;
     }
 
     @Override

@@ -9,10 +9,6 @@ public class Fill implements FillBehavior {
     private Color color;
     private RectangularShape shape;
 
-    public Fill() {
-
-    }
-
     @Override
     public void setColor(Color color) {
         this.color = color;
@@ -27,7 +23,7 @@ public class Fill implements FillBehavior {
     }
 
     @Override
-    public void serShape(RectangularShape s) {
+    public void setShape(RectangularShape s) {
         shape = s;
     }
 
